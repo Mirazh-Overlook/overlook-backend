@@ -1,42 +1,305 @@
-<%- include('partials/header') %>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+  <link rel="icon" type="image/ico" href="images/Icon.png">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body{
+      position: relative;
+    width: 1440px;
+    height: 900px;
+    background: #E5E5E5;
+  }
+  .Group22{
+    position: absolute;
+    width: 354px;
+    height: 603px;
+    left: 187px;
+    top: 147px;
+  }
+  .right{
+    
 
-<div class="container mt-5">
-  <h1>Login</h1>
+    position: absolute;
+    left: 53.75%;
+    right: 3.75%;
+    top: 15.11%;
+    bottom: 30.19%;
+  }
+  .left{
+    margin-top: 30px;
+    margin-left: 25px;
+  }
+  #f2{
+    height: 25px;
+    width: 60%;
+  }
+  #f3{
+    height: 25px;
+    width: 60%;
+  }
+  #s1{
+    
 
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body">
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 24px;
+    letter-spacing: 0.18px;
 
-          <!-- Makes POST request to /login route -->
-          <form action="/login" method="POST">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-dark">Login</button>
-          </form>
 
-        </div>
-      </div>
-    </div>
+  }
+  #login{
+    height: 40px;
+    width: 103%;
+    font-family:Poppins;
+    letter-spacing: 0.18px;
+    font-size: 15px;
+    font-weight: 900;
+    border: none;
+    background-color:#EF5350;
+    border-radius: 3px;
+  }
+  .box{
 
-    <!-- <div class="col-sm-4">
-      <div class="card">
-        <div class="card-body">
-          <a class="btn btn-block" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign In with Google
-          </a>
-        </div>
-      </div>
-    </div> -->
+    position: absolute;
+    width: 158%;
+    height:25px;
+    background: #E5E5E5;
+  }
+  .box .inp{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 18px;
+    border-radius: 3px;
+    background: #E5E5E5;
+  }
+  .box .inp:valid + .label{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 18px;
+    color: #8d8d8d;
+    
 
-  </div>
+  }
+  .box .inp:focus{
+    border:2px solid royalblue;
+  }
+  .box .inp:focus + .label{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 18px;
+    color: royalblue;
+    transition: .5s;
+  }
+  .box .label {
+    color: gray;
+    position: absolute;
+    top: 19px;
+    left:18px;
+    font-family: Poppins;
+    background: #E5E5E5;
+  }
+  .box1{
+    position: absolute;
+    width: 158%;
+    height:25px;
+    top: 25%;
+    background: #E5E5E5;
+  }
+  .box1 .pass{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 18px;
+    border-radius: 3px;
+    background: #E5E5E5;
+  }
+  .box1 .pass:valid + .label{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 18px;
+    color: #8d8d8d;
+  }
+  .box1 .pass:focus{
+    border:2px solid royalblue;
+  }
+  .box1 .pass:focus + .label{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 18px;
+    color: royalblue;
+    transition: .5s;
+  }
+  .box1 .label {
+    color: gray;
+    position: absolute;
+    top: 17px;
+    left:18px;
+    font-family: Poppins;
+    background: #E5E5E5;
+  }
+  span{
+    position: absolute;
+    right:210px;
+    color: gray;
+    margin-top: 4%;
+    cursor: pointer;
+  }
+  p{   
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align:center;
+  }
+  #a1{
+    text-decoration: none;
+    color: darkblue;
+    font-family: "Poppins";
+    font-weight: 900;
+  }
+  .top{
+    display: none;
+  }
+  @media only screen and (max-width: 1024px){
+
+    .body{
+      position: relative;
+      width: 1024px;
+      height: 768px;
+      background: white;
+    }
+    .right{
+    
+    position: absolute;
+      left: 32.85%;
+    right: 4.65%;
+    top: 25.11%;
+    bottom: 22.19%;
+    /*bottom: 62.9%;*/
+    /*width: 297px;*/
+    /*height: 243.29px;*/
+    }
+
+    .Group22{
+    position: absolute;
+        left: 6.06%;
+        right: 6.81%;
+        top: 30.24%;
+        bottom: 13.73%;
+
+  }
+
+  }
+  @media only screen and (max-width: 411px){
+    .body{
+      position: relative;
+      width: 411px;
+      height: 823px;
+      background: #FFFFFF;
+    }
+
+    .right{
+    display:flex;
+    position: absolute;
+        left: 1.5%;
+    right: 13.87%;
+    top: 7.53%;
+    bottom: 62.9%;
+    /*width: 297px;*/
+    height: 243.29px;
+    /*grid-template-columns: 1fr;*/
+    }
+    #rt{
+      width:377px;
+    }
+
+    .top{
+    display:block;
+    margin-left:24%;
+    margin-top: 3%;
+  }
+  .left{
+    display: none;
+  }
+  .Group22{
+    position: absolute;
+left: 1.06%;
+right: 6.81%;
+top: 37.24%;
+justify-content: center;
+
+  }
+
+  }
+  /*@media (max-width: 666px) {
+  .right {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+  }
+
+
+}*/
+  </style>
+
+</head>
+<body>
+<div class="left">
+            <img src="images/Frame 1.png" alt="">
 </div>
-
-<%- include('partials/footer') %>
+<div class="top">
+            <img src="images/Icon1.png" alt="">
+</div>
+        <div class="Group22">
+         <h3 id="s1">Sign In</h3>
+          <form action="/login" method="POST">
+            
+               <div class="box">
+            <input type="text" id="f2" class="inp" required="required" name="username">
+            <label for="Email" class="label">Email</label>
+        </div>
+                 <br><br><br><br><br><br>
+               <div class="box1">
+            <input type="password" class="pass" required="required" id="f3" name="password">
+            <label for="password" class="label">Password</label>
+            <span>
+              <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i> 
+            </span>
+            <script type="text/javascript">
+              var state= false;
+              function toggle(){
+                          if(state){
+                        document.getElementById("f3").setAttribute("type","password");
+                        document.getElementById("eye").style.color='#7a797e';
+                        state = false;
+                          }
+                          else{
+                        document.getElementById("f3").setAttribute("type","text");
+                        document.getElementById("eye").style.color='#5887ef';
+                        state = true;
+                          }
+                      }
+            </script>
+        </div>
+                <br><br><br>
+                <input type="submit" id="login" value="SIGN IN">
+            </form>
+            <p>Don't Have An Account ? <a href="/register" target="_blank" id="a1">Sign Up</a></p> 
+        </div>
+    <div class="right">
+            <img src="images/Group 14.png" id="rt" alt="">
+    </div>
+</body>
+</html>

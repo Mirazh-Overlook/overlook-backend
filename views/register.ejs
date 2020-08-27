@@ -1,41 +1,488 @@
-<%- include('partials/header') %>
-<div class="container mt-5">
-  <h1>Register</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+  <title>Signup</title>
+  <link rel="icon" type="image/ico" href="images/Icon.png">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+  body{
+    position: relative;
+    width: 1440px;
+    height: 900px;
+    font-family: 'Poppins';
+    background: #E5E5E5;
+     /*background: rgba(179, 157, 219, 0.2);*/
+     /*background: linear-gradient(180deg, #FFF6F6 0%, #FCE5E5 100%);*/
+  }
+  .Group22{
+    position: absolute;
+    width: 354px;
+    height: 597px;
+    left: 202px;
+    top: 146px;
+  }
+  .left{
+    margin-left: 30px;
+    margin-top: 25px;
+  }
+  .right{
 
-  <div class="row">
-    <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body">
+    position: absolute;
+      left: 49.85%;
+    right: 4.65%;
+    top: 25.11%;
+    bottom: 22.19%;
+  }
+  .rdo{
+    font-size: 20px;
+    font-family: Poppins;
+  }
+  #s1{
+    
+    font-family: Poppins;
+      font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 0.18px;
+  }
+  .box{
+    position: absolute;
+    width: 260px;
+    height:25px;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px;
+    background: rgba(179, 157, 219, 0.2);
+  }
 
-          <!-- Makes POST request to /register route -->
-          <form action="/register" method="POST">
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" name="username">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
-            </div>
-            <button type="submit" class="btn btn-dark">Register</button>
-          </form>
+  .box .inp{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray ;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: Poppins;
+    background: #E5E5E5;
+  }
+  .box .inp:valid + .label{
+    top: -9px;
+    padding: 0 3px;
+    font-family: Poppins;
+    font-size: 16px;
+    color: #8d8d8d;
+  }
+  .box .inp:focus{
+    border:2px solid #0066FF;
+  }
+  .box .inp:focus + .label{
+    top: -9px;
+    padding: 0 3px;
+    font-family: Poppins;
+    font-size: 16px;
+    color:  #0066FF;
+    transition: .5s;
+  }
+  .box .label {
+    color: gray;
+    position: absolute;
+    top: 19px;
+    left:18px;
+    font-family: Poppins;
+    font-size: 16px;
+    background: #E5E5E5;
+  }
+  .box1{
+    position: absolute;
+    width: 260px;
+    height:25px;
+    top: 26%;
+    font-family: Poppins;
+  }
+  .box1 .mail{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 16px;
+    font-family: Poppins;
+    border-radius: 5px;
+    background: #E5E5E5;
+  }
+  .box1 .mail:valid + .label1{
+    top: -9px;
+    padding: 0 3px;
+    font-size: 16px;
+    font-family: Poppins;
+    color: #8d8d8d;
+    background: white;
 
-        </div>
-      </div>
-    </div>
+  }
+  .box1 .mail:focus{
+    border:2px solid #0066FF;
+  }
+  .box1 .mail:focus + .label1{
+    top: -9px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #0066FF;
+    font-family: Poppins;
+    transition: .5s;
+  }
+  .box1 .label1 {
+    color: gray;
+    position: absolute;
+    top: 20px;
+    left:15px;
+    font-family: Poppins;
+    background: #E5E5E5;
+  }
+  [type="date"]{
+    background: #E5E5E5;
+    font-family: Poppins;
 
-    <!-- <div class="col-sm-4">
-      <div class="card social-block">
-        <div class="card-body">
-          <a class="btn btn-block" href="/auth/google" role="button">
-            <i class="fab fa-google"></i>
-            Sign Up with Google
-          </a>
-        </div>
-      </div>
-    </div> -->
+  }
+  
+  .box2{
+    position: absolute;
+    width: 171px;
+    height:25px;
+    top: 39%;
+    background: #E5E5E5;
+  }
+  .box2 .dob{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 13px;
+    font-family: Poppins;
+    border-radius: 5px;
+    background: #E5E5E5;
+  }
+  .box2 .dob:valid + .label2{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 18px;
+    color: #8d8d8d;
+    }
+  .box2 .dob:focus{
+    border:2px solid #0066FF;
+  }
+  .box2 .dob:focus + .label2{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #0066FF;
+    transition: .5s;
+  }
+  .box2 .label2 {
+    color: gray;
+    position: absolute;
+    top: 19px;
+    left:15px;
+    font-family: Poppins;
+    font-size: 16px;
+    background: #E5E5E5;
+  }
+  .rdo{
+    position: absolute;
+    top: 52%;
+    font-size: 16px;
+    color: gray;
+    font-family: Poppins;
+    text-decoration:none;
+    background: #E5E5E5;
+  }
+  #rdo2{
+    margin-left: 30px;
+    background: #E5E5E5;
+  }
+  .box3{
+    position: absolute;
+    width: 260px;
+    height:25px;
+    top: 60%;
+    background: #E5E5E5;
+  }
+  .box3 .pass{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #E5E5E5;
+  }
+  .box3 .pass:valid + .label3{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #8d8d8d;
+  }
+  .box3 .pass:focus{
+    border:2px solid #0066FF;
+  }
+  .box3 .pass:focus + .label3{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #0066FF;
+    transition: .5s;
+  }
+  .box3 .label3 {
+    color: gray;
+    position: absolute;
+    top: 20px;
+    left:16px;
+    font-family: Poppins;
+    background: #E5E5E5;
+  }
+  .box4{
+    position: absolute;
+    width: 260px;
+    height:25px;
+    top: 75%;
+    background: #E5E5E5;
+  }
+  .box4 .cnfpass{
+    outline: none;
+    padding: 16px 13px;
+    border:2px solid lightgray;
+    font-size: 16px;
+    border-radius: 5px;
+    background: #E5E5E5;
+  }
+  .box4 .cnfpass:valid + .label4{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #8d8d8d;
+  }
+  .box4 .cnfpass:focus{
+    border:2px solid #0066FF;
+  }
+  .box4 .cnfpass:focus + .label4{
+    top: -10px;
+    padding: 0 3px;
+    font-size: 16px;
+    color: #0066FF;
+    transition: .5s;
+  }
+  .box4 .label4 {
+    color: gray;
+    position: absolute;
+    top: 20px;
+    left:16px;
+    font-family:Poppins;
+    background: #E5E5E5;
+  }
+  span{
+    position: absolute;
+    right:11px;
+    top: 78%;
+    color: gray;
+    cursor: pointer;
+  }
+  .eye{
+    position: absolute;
+    right:11px;
+    top: 63%;
+    color: gray;
+    cursor: pointer;
+  }
+  #Signup{
+    height: 40px;
+    width: 103%;
+    letter-spacing: 0.18px;
+    font-size: 15px;
+    margin-top: 265px;
+    outline: none;
+    border: none;
+    font-family:"Poppins";
+    font-weight: 900;
+    border-radius: 3px;
+    background-color: #EF5350;
+  }
+  #f1{
+    width: 129%;
+    height: 25px;
+  }
+  #f2{
+    width: 129%;
+    height: 25px;
+  }
+  #f3{
+    width: 196%;
+    height: 25px;
+  }
+  #f4{
+    width: 129%;
+    height: 25px;
+  }
+  #f5{
+    width: 129%;
+    height: 25px;
+  }
+  p{   
 
-  </div>
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    text-align:center;
+  }
+  #a1{
+    text-decoration: none;
+    color: darkblue;
+    font-family: "Poppins";
+    font-weight: 900;
+  }
+  .top{
+    display:none;
+  }
+  @media only screen and (max-width: 1024px){
+
+    .body{
+      position: relative;
+      width: 1024px;
+      height: 768px;
+      background: #FFFFFF;
+    }
+    .right{
+    
+    position: absolute;
+      left: 32.85%;
+    right: 4.65%;
+    top: 25.11%;
+    bottom: 22.19%;
+    /*bottom: 62.9%;*/
+    /*width: 297px;*/
+    /*height: 243.29px;*/
+    }
+
+    .Group22{
+    position: absolute;
+        left: 4.06%;
+        right: 6.81%;
+        top: 16.24%;
+        bottom: 13.73%;
+
+  }
+
+  }
+  @media only screen and (max-width: 411px){
+    .body{
+      position: relative;
+      width: 411px;
+      height: 823px;
+      background: #FFFFFF;
+    }
+
+    .right{
+    display: none;
+    /*grid-template-columns: 1fr;*/
+    }
+    .top{
+    display:block;
+    margin-left:24%;
+    margin-top: 3%;
+  }
+  .left{
+    display: none;
+  }
+  .Group22{
+    position: absolute;
+left: 1.06%;
+right: 6.81%;
+top: 7.24%;
+bottom: 13.73%;
+
+  }
+}
+</style>
+</head>
+<body>
+<div class="left">
+            <img src="images/Frame 1.png" alt="">
 </div>
+<div class="top">
+            <img src="images/Icon1.png" alt="">
+</div>
+    <div class="Group22">
+        <h2 id="s1">Sign Up</h2>
+          <form action="/register" method="POST">
+             <div class="box">
+              <input type="text" id="f1" class="inp" required="required" name="name">
+              <label for="Full Name" class="label">Full Name</label>
+             </div><br><br>
+               <div class="box1">
+              <input type="text" id="f2" class="mail" required="required" name="username">
+              <label for="mail" class="label1">Email</label>
+             </div><br><br>
+               <div class="box2">
+              <input type="date" id="f3" class="dob" required="required" name="dob">
+              <label for="dob" class="label2">Date Of Birth</label>
+             </div><br><br>
+             <div class="rdo">
+              <input type="radio" name="male" id="rdo1">Male
+              <input type="radio" name="female" id="rdo2">Female
+             </div>
+             <div class="box3">
+              <input type="text" id="f4" class="pass" required="required" name="password">
+              <label for="pass" class="label3">Set Password</label>
+             </div><br><br>
+             <div class="box4">
+              <input type="text" id="f5" class="cnfpass" required="required" >
+              <label for="cnfpass" class="label4">Re-Enter Password</label>
+             </div><br><br>
+             <span>
+              <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i> 
+         </span>
+         <span class="eye">
+              <i class="fa fa-eye" aria-hidden="true" id="eye1" onclick="toggle1()"></i> 
+         </span>
 
-<%- include('partials/header') %>
+            <script type="text/javascript">
+              var state= false;
+              function toggle(){
+                          if(state){
+                        document.getElementById("f5").setAttribute("type","password");
+                        document.getElementById("eye").style.color='#7a797e';
+                        state = false;
+                          }
+                          else{
+                        document.getElementById("f5").setAttribute("type","text");
+                        document.getElementById("eye").style.color='#5887ef';
+                        state = true;
+                          }
+                      }
+            </script>
+            <script type="text/javascript">
+              var state= false;
+              function toggle1(){
+                          if(state){
+                        document.getElementById("f4").setAttribute("type","password");
+                        document.getElementById("eye1").style.color='#7a797e';
+                        state = false;
+                          }
+                          else{
+                        document.getElementById("f4").setAttribute("type","text");
+                        document.getElementById("eye1").style.color='#5887ef';
+                        state = true;
+                          }
+                      }
+            </script>
+            
+              <input type="submit" id="Signup" value="SIGN UP">
+            
+                 
+            </form>
+          <p>Already Have An Account ? <a href="/login" target="_blank" id="a1">Sign In</a></p> 
+        </div>
+    <div class="right">
+            <img src="images/Group 14.png" alt="">
+        </div>
+</body>
+</html>
