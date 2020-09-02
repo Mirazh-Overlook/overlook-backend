@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="css/dashboardStyle.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="sidenav">
+        <!-- SIDE NAV RECTANGLE -->
+        <rect id="rectangle1">
+            <span id="overlook1"><img src="images/overlook1.png" ></span>
+            
+
+            <span id="ellipse1"><img src="images/vector1.png" id="vector1" alt=""></span>
+            <span id="ellipse2"><img src="images/vector2.png" id="vector2" alt=""></span>
+            <span id="ellipse3"><img src="images/vector3.png" id="vector3" alt=""></span>
+            <span id="ellipse4"><img src="images/vector4.png" id="vector4" alt=""></span>
+            <span id="ellipse5"><img src="images/vector5.png" id="vector5" alt=""></span>
+            <span id="ellipse6"><img src="images/vector6.png" id="vector6" alt=""></span>
+            <span id="ellipse7"><img src="images/vector7.png" id="vector7" alt=""></span>
+            
+            <img src="images/double_arrow.png" id="double_arrow" >
+            <img src="images/exit_to_app.png" id="exit_to_app" >
+        </rect>
+    </div>
+
+    <div id="top_header">
+        <!-- HEADER, SEARCH  -->
+            <form action="">
+                <input type="text" placeholder=" Search" name="" id="search_rect">
+                <img src="images/search_icon.png" id="search_icon">
+            </form>
+        <div>
+            <!-- ICONS DIV -->
+            <img src="images/settings_icon.png" id="settings_icon">
+            <img src="images/notification_icon.png"  id="notification_icon">
+            <img src="images/profile.png" id="profile_icon">
+        </div>
+    </div>
+
+    <div>
+        <!-- TOP 4 RECTANGLES FOR NAME , ATTENDENCE, PERFORMANCE, _________, ____________ -->
+        <h1 id="username">Hi <%= name %></h1>
+        <p id="welcome_text">Welcome back to Overlook</p>
+        <!-- RECTANGLE 1 -->
+        <rect id="top_rect1">
+            <p id="top_rect_texta1">PERFORMANCE</p>
+            <p id="top_rect_data1">88%</p>
+            <img src="images/arrow_upward.png" id="arrow_upword" alt="">
+            <p id="top_rect_textb1_green">3% Last week</p>
+            <img src="images/trending_up.png" id="trending_up">
+        </rect>
+        <!-- REACTANGLE 2 -->
+        <rect id="top_rect2">
+            <p id="top_rect_texta1" style="color: #00796B;">ATTENDENCE</p>
+            <p id="top_rect_data1">75%</p>
+            <img src="images/arrow_upward.png" id="arrow_upword" alt="">
+            <p id="top_rect_textb1_green">8% Last week</p>
+            <img src="images/analytics.png" id="trending_up">
+        </rect>
+        <!-- RECTANGLE 3 -->
+        <rect id="top_rect3">
+            <p id="top_rect_texta1" style="color: #FFA000;">PERFORMANCE</p>
+            <p id="top_rect_data1">88%</p>
+            <img src="images/arrow_downward.png"  id="arrow_downword" alt="">
+            <p id="top_rect_textb1_red">3% Last week</p>
+            <img src="images/trending_up_yellow.png" id="trending_up">
+        </rect>
+        <!-- RECTANGLE 4 -->
+        <rect id="top_rect4">
+            <p id="top_rect_texta1" style="color: #E64A19;">PERFORMANCE</p>
+            <p id="top_rect_data1">88%</p>
+            <img src="images/arrow_upward.png" id="arrow_upword" alt="">
+            <p id="top_rect_textb1_green">3% Last week</p>
+            <img src="images/trending_up_red.png" id="trending_up">
+        </rect>        
+    </div>
+    <!-- Line Break -->
+    <hr id="horizontal_break">
+    <!-- MIDDLE 3 BOXES -->
+    <div>
+        <!-- MIDDLE RECTANGLE 1 -->
+        <rect id="mid_rect1">
+            <div >
+                <p id="mid_rect_texta1">OVERVIEW</p>
+                <p id="mid_rect_textb1">Attendence</p>
+                <p id="mid_rect_textc1">See Details</p>
+            </div>
+
+        </rect>
+        <!-- MIDDLE RECTANLGE 2 -->
+        <rect id="mid_rect2">
+            <div >
+                <p id="mid_rect_texta1">PERFORMANCE</p>
+                <p id="mid_rect_textb1">Exam Marks</p>
+                <p id="mid_rect_textc1" style="right: -320px;" >See Details</p>
+            </div>
+
+        </rect>
+        <!-- MIDDLE RECTANGLE 3 -->
+        <rect id="mid_rect3">
+            <div >
+                <p id="mid_rect_texta1">TRACKER</p>
+                <p id="mid_rect_textb1">Syllabus</p>
+                <p id="mid_rect_textc1" style="right: -250px;">See Details</p>
+            </div>
+
+        </rect>
+        <!-- MIDDLE RECTANGLE 4 -->
+        <rect id="mid_rect4">
+            <div >
+                <p id="mid_rect_texta1">OVERVIEW</p>
+                <p id="mid_rect_textb1" style="width: 210px;">Events & Holidays</p>
+                <p id="mid_rect_textc1" style="right: -370px;">See Details</p>
+            </div>
+
+        </rect>
+        <!-- MIDDLE RECTANGLE 5 -->
+        <rect id="mid_rect5">
+            <div >
+                <p id="mid_rect_texta1">OVERVIEW</p>
+                <p id="mid_rect_textb1">Tasks</p>
+                <p id="mid_rect_textc1" style="right: -360px">See Details</p>
+            </div>
+
+        </rect>
+        <!-- MIDDLE RECTANGLE 6 -->
+        <rect id="mid_rect6">
+            <div >
+                <p id="mid_rect_texta1">OVERVIEW</p>
+                <p id="mid_rect_textb1">Attendence</p>
+                <p id="mid_rect_textc1" style="right: -250px;">See Details</p>
+            </div>
+
+        </rect>
+    </div>
+
+
+</body>
+</html>   
+
