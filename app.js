@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect("mongodb://localhost:27017/userDB", { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect("mongodb+srv://admin:07aug1998@cluster0.0phgw.mongodb.net/userDB?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
 mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema ({
@@ -61,6 +61,10 @@ app.get("/register", function(req, res){
 	res.render("register");
 });
 
+app.get("/dashboard", function(req, res){
+	res.render("dashboard");
+});
+
 app.get("/logout", function(req, res){
 	req.logout();
 	res.redirect('/');
@@ -91,7 +95,7 @@ app.post("/register", function(req, res){
 				res.redirect("/register");
 			} else {
 				passport.authenticate("local")(req, res, function() {
-					res.redirect("/home");
+					res.redirect("/login");
 				});
 			}
 		})
@@ -110,7 +114,11 @@ app.post("/login", function(req, res){
 			res.redirect("/login");
 		} else {
 			passport.authenticate("local")(req, res, function(){
-				res.redirect("/home");
+				res.render("dashboard", {name: req.user.name});
+				// res.redirect("/dashboard");
+				// console.log(req.user.name);
+				// res.render("list", {listTitle: foundList.name, newlistitems: foundList.items});
+
 			});
 		}
 	});
